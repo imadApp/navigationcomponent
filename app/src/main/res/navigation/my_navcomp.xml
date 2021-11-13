@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navcomp"
+    app:startDestination="@id/frist_Fragment">
+
+    <fragment
+        android:id="@+id/frist_Fragment"
+        android:name="com.app.english.navigationcomponent.FristFragment"
+        android:label="fragment_frist"
+        tools:layout="@layout/fragment_frist" >
+        <action
+            android:id="@+id/action_fristFragment_to_secondFragment"
+            app:destination="@id/second_Fragment" />
+        <argument
+            android:name="Numbre"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/second_Fragment"
+        android:name="com.app.english.navigationcomponent.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_fristFragment"
+            app:destination="@id/frist_Fragment" />
+
+    </fragment>
+</navigation>
